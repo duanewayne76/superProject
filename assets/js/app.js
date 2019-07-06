@@ -6,13 +6,15 @@ $(document).ready(function () {
 
 
     $("#submit-button").on("click", function (event) {
-
+        $("#img").empty();
+        $("#stuff").empty();
         event.preventDefault();
-        
+
 
         var ak = "c6a18f9be9e8692a7c9ef136e473eb41";
         var url = $('#user-link').val().trim();
         if (url) {
+           
 
             var auth = '4775-012efdf683fa5f53cd2a9f42456e4008';
             var imgUrl = `http://image.thum.io/get/auth/${auth}/https://${url}`;
@@ -39,7 +41,7 @@ $(document).ready(function () {
             });
         }
 
-     
+
 
 
 
