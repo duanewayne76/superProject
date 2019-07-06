@@ -1,0 +1,29 @@
+{
+
+    "dns_entries": [{
+            "RData": "\"v=spf1 redirect=_spf.facebook.com\"",
+            "Type": "TXT"
+        },
+        {
+            "RData": "173.252.100.16",
+            "Type": "A"
+        },
+        {
+            "RData": "a.ns.facebook.com. dns.facebook.com. 2013010300 7200 1800 604800 120",
+            "Type": "SOA"
+        },
+        {
+            "RData": "a.ns.facebook.com.",
+            "Type": "NS"
+        },
+        {
+            "RData": "b.ns.facebook.com.",
+            "Type": "NS"
+        },
+        {
+            "RData": "10 smtpin.mx.facebook.com.",
+            "Type": "MX"
+        }
+    ]
+
+}
