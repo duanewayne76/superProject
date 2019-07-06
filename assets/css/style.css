@@ -1,27 +1,32 @@
 body {
-    background: rgb(218,165,146);
-    background: linear-gradient(255deg, rgba(218,165,146,1) 19%, rgba(174,239,240,1) 100%); 
+    background: rgb(218, 165, 146);
+    background: linear-gradient(255deg, rgba(218, 165, 146, 1) 19%, rgba(174, 239, 240, 1) 100%);
 }
 
 div.jumbotron {
     background-color: #f2f6f5;
-    
 }
+
 hr {
- width: 80vw;
- height: 0px;
- opacity: 0;
- }
+    width: 80vw;
+    height: 0px;
+    opacity: 0;
+}
 
-h4, h1 {
+h4,
+h1 {
     font-family: 'DM Serif Display', serif;
- }
+}
 
- #answer {
-     background-color: #63707e;
-     width: 100%;
- }
+#answer {
+    background-color: #63707e;
+    width: 100%;
+}
 
- #txt h2{
-     color: white;
- }
+#txt h2 {
+    color: white;
+}
+
+img {
+    max-width: 45vw;
+}

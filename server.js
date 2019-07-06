@@ -1,4 +1,4 @@
-var unirest = require('unirest');
+// var unirest = require('unirest');
 const express = require('express');
 const app = express();
 var port = process.env.PORT || 80;
@@ -18,12 +18,12 @@ app.get(/^(.+)$/, function(req, res) {
     console.log('static file request : ' + req.params);
     res.sendFile(process.cwd() + req.params[0]);
 });
-unirest.get("https://www.enclout.com/api/v1/dns/show.json?&auth_token=jsvXsM7Cx4AH-r3YURXp&url=google.com")
-    .header("X-RapidAPI-Host", "enclout-dns.p.rapidapi.com")
-    .header("X-RapidAPI-Key", "bea944226amsh898e8f2e830e27cp17c2e2jsne8f88fdb0919")
-    .end(function(result) {
-        console.log(result.status, result.headers, result.body);
-    });
+// unirest.get("https://www.enclout.com/api/v1/dns/show.json?&auth_token=jsvXsM7Cx4AH-r3YURXp&url=google.com")
+//     .header("X-RapidAPI-Host", "enclout-dns.p.rapidapi.com")
+//     .header("X-RapidAPI-Key", "bea944226amsh898e8f2e830e27cp17c2e2jsne8f88fdb0919")
+//     .end(function(result) {
+//         console.log(result.status, result.headers, result.body);
+//     });
 
 app.listen(port, err => {
     if (err) {
