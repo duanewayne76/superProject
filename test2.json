@@ -1,0 +1,37 @@
+{
+
+    "Google": {
+        "target": "facebook.com",
+        "value": "ok",
+        "status": "OK"
+    },
+    "MyWOT": {
+        "status": "OK",
+        "target": "facebook.com",
+        "Trustworthiness": [
+            86,
+            47
+        ],
+        "Trustworthiness_Reputation": "Excellent",
+        "Trustworthiness_Confidence": "5/5",
+        "VendorReliability": [
+            86,
+            47
+        ],
+        "VendorReliability_Reputation": "Excellent",
+        "VendorReliability_Confidence": "5/5",
+        "Privacy": [
+            86,
+            47
+        ],
+        "Privacy_Reputation": "Excellent",
+        "Privacy_Confidence": "5/5",
+        "ChildSafety": [
+            80,
+            38
+        ],
+        "ChildSafety_Reputation": "Excellent",
+        "ChildSafety_Confidence": "4/5"
+    }
+
+}
