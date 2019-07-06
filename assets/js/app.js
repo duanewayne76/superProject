@@ -33,7 +33,7 @@ $(document).ready(function() {
             $("#user-link").val("");
             $('#answer').removeClass("d-none");
 
-            var ipURL = "test.json";
+            var ipURL = "test2.json";
 
             $.ajax({
                 url: ipURL,
