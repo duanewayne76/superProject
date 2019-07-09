@@ -33,7 +33,7 @@ $(document).ready(function() {
             $("#user-link").val("");
             $('#answer').removeClass("d-none");
 
-            var ipURL = "https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=at_3fGj57nrEWvCnPmWisKfWJwaVgE7N&domainName=google.com";
+            var ipURL = "https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=at_3fGj57nrEWvCnPmWisKfWJwaVgE7N&domainName=google.com&outputFormat=JSON";
 
             $.ajax({
                 url: ipURL,
