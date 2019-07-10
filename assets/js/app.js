@@ -5,6 +5,7 @@ $(document).ready(function () {
         let url2Check = url;
         let aKey = "at_3fGj57nrEWvCnPmWisKfWJwaVgE7N";
         let ipURL = `https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=${aKey}&domainName=${url2Check}&outputFormat=JSON&ip=1`;
+
         let catKey = "at_EIIrtzYfiUiqdQfGcXoPvRaMgclE0";
         let catURL = `https://website-categorization-api.whoisxmlapi.com/api/v1?apiKey=${catKey}&domainName=${url2Check}&outputFormat=JSON&ip=1`;
         let ipURL2 = `https://domain-reputation-api.whoisxmlapi.com/api/v1?apiKey=at_hlGtCnlRNdDjwETKwzP8m73YcYq99&domainName=${url2Check}`;
@@ -84,6 +85,7 @@ $(document).ready(function () {
         });
 
     }
+
     $("#submit-button").on("click", function (event) {
         $("#img").empty();
         $("#stuff").empty();
@@ -97,8 +99,10 @@ $(document).ready(function () {
             // function that takes the url the user gave and performs an AJAX call for Info
             getUrlInfo(url);
 
+
             $("#user-link").val("");
             $('#answer').removeClass("d-none");
+
 
             // img created from thum.io and appended onto the page
             var auth = '4775-012efdf683fa5f53cd2a9f42456e4008';
