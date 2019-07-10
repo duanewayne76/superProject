@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
+
     function getUrlInfo(url) {
+
 
         let url2Check = url;
         let aKey = "at_3fGj57nrEWvCnPmWisKfWJwaVgE7N";
@@ -11,84 +13,90 @@ $(document).ready(function () {
         let ipURL2 = `https://domain-reputation-api.whoisxmlapi.com/api/v1?apiKey=at_hlGtCnlRNdDjwETKwzP8m73YcYq99&domainName=${url2Check}`;
 
 
+        $.ajax({
+            url: ipURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            var ip = response.WhoisRecord.ips[0];
+            console.log(ip);
+            $("#ip").html(ip);
+            
+
+        });
+        $.ajax({
+            url: ipURL2,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            var rep = response.reputationScore + "%";
+            var warning = response.testResults[0].warnings[0];
+            $("#rScore").html(rep);
+            $("#rWarnings").html(warning);
+            // console.log(ip);
 
 
+        });
 
         $.ajax({
             url: catURL,
             method: "GET"
-        }).then(function (response1) {
-            console.log(response1);
-            $.ajax({
-                url: ipURL2,
-                method: "GET"
-            }).then(function (response2) {
-                console.log(response2);
-                $.ajax({
-                    url: ipURL,
-                    method: "GET"
-                }).then(function (response3) {
-                    console.log(response3);
-
-                    var ip = response3.WhoisRecord.ips[0];
-                    var rep = response2.reputationScore + "%";
-                    var warning = response2.testResults[0].warnings[0];
-                    var cat = response1.categories[0];
-                    var dName = response1.domainName;
-
-                    $('#stuff').append(`
-                     <div id="txt">
-                         <div class="p-2"><h2>Domain Name: ${dName}</h2>
-                         </div>
-                              <div class="p-2"><h2>Category: ${cat}</h2>
-                              </div>
-                                   <div class="p-2"><h2>Reputation Score: ${rep}</h2>
-                                   </div>
-                                     <div class="p-2"><h2>Warning(s): ${warning}</h2>
-                                </div>
-                            <div class="p-2"><h2>IP: ${ip}</h2>
-                            </div>
-                        </div>`)
+        }).then(function (response) {
+            console.log(response);
+            var cat = response.categories[0];
+            var dName = response.domainName;
+            $("#cat").html(cat);
+            $("#dName").html(dName);
+            // console.log(ip);
 
 
 
-                    //         var ip = response3.WhoisRecord.ips[0];
-                    //         // console.log(ip);
-                    //         var x = $('<div>');
-                    //         x.html(`<div class="p-2"><h2>IP: ${ip}</h2></div>`);
-                    //         x.attr("id", "txt");
-                    //         $('#stuff').append(x);
-
-                    //     });
-                    //     var rep = response2.reputationScore + "%";
-                    //     var warning = response2.testResults[0].warnings[0];
-                    //     // console.log(ip);
-                    //     var x = $('<div>');
-                    //     x.html(`<div class="p-2"><h2>Reputation Score: ${rep}</h2></div><div class="p-2"><h2>Warning(s): ${warning}</h2></div>`);
-                    //     x.attr("id", "txt");
-                    //     $('#stuff').append(x);
-                    // });
-                    // var cat = response1.categories[0];
-                    // var dName = response1.domainName;
-                    // console.log(cat);
-                    // console.log(dName);
-                    // var x = $('<div>');
-                    // x.html(`<div class="p-2"><h2>Domain Name: ${dName}</h2></div><div class="p-2"><h2>Category: ${cat}</h2></div>`);
-                    // x.attr("id", "txt");
-                    // $('#stuff').append(x);
-
-                });
-
-
-            });
 
         });
-
     }
+
+
+
+
+
+
+    //         var ip = response3.WhoisRecord.ips[0];
+    //         // console.log(ip);
+    //         var x = $('<div>');
+    //         x.html(`<div class="p-2"><h2>IP: ${ip}</h2></div>`);
+    //         x.attr("id", "txt");
+    //         $('#stuff').append(x);
+
+    //     });
+    //     var rep = response2.reputationScore + "%";
+    //     var warning = response2.testResults[0].warnings[0];
+    //     // console.log(ip);
+    //     var x = $('<div>');
+    //     x.html(`<div class="p-2"><h2>Reputation Score: ${rep}</h2></div><div class="p-2"><h2>Warning(s): ${warning}</h2></div>`);
+    //     x.attr("id", "txt");
+    //     $('#stuff').append(x);
+    // });
+    // var cat = response1.categories[0];
+    // var dName = response1.domainName;
+    // console.log(cat);
+    // console.log(dName);
+    // var x = $('<div>');
+    // x.html(`<div class="p-2"><h2>Domain Name: ${dName}</h2></div><div class="p-2"><h2>Category: ${cat}</h2></div>`);
+    // x.attr("id", "txt");
+    // $('#stuff').append(x);
+
+
+
+
+
+
+
+
+
 
     $("#submit-button").on("click", function (event) {
         $("#img").empty();
-        $("#stuff").empty();
+        $("#ip").empty();
         event.preventDefault();
 
 
@@ -97,6 +105,8 @@ $(document).ready(function () {
         if (url) {
 
             // function that takes the url the user gave and performs an AJAX call for Info
+            // $("#img").empty();
+            // $("#stuff").empty();
             getUrlInfo(url);
 
 
@@ -117,6 +127,9 @@ $(document).ready(function () {
 
 
 
+
+
     });
+
 
 })
