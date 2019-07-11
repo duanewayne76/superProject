@@ -1,11 +1,22 @@
 body {
-    background: rgb(218, 165, 146);
-    background: linear-gradient(255deg, rgba(218, 165, 146, 1) 19%, rgba(174, 239, 240, 1) 100%);
+
+    background-image: url("kisspng-stock-photography-detective-clip-art-illustration-dmitry-nazarenko-2-17-5be981e9ca5a52.9264880915420298018288.jpg.png"), url("1.jpg") ;
+  background-repeat: no-repeat, repeat;
+  background-attachment: fixed;
+  background-position: bottom left;
+  
+  
+  
+    
+    
 }
 
-div.jumbotron {
-    background-color: #f2f6f5;
+.text-center { font-family: 'DM Serif Display', serif;
+    font-size: 100px;
+
 }
+
+
 
 hr {
     width: 80vw;
@@ -20,14 +31,23 @@ h1 {
 }
 
 #answer {
-    background-color: #63707e;
+    background-color: white;
     width: 100%;
+    padding-left: 0px;
+    padding-right:0px;
 }
 
 #txt h2 {
-    color: white;
+    color: black;
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    
 }
 
 img {
     max-width: 45vw;
+}
+
+.jumbotron {
+    background-color: transparent !important;
 }

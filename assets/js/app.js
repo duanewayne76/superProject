@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         let catKey = "at_EIIrtzYfiUiqdQfGcXoPvRaMgclE0";
         let catURL = `https://website-categorization-api.whoisxmlapi.com/api/v1?apiKey=${catKey}&domainName=${url2Check}&outputFormat=JSON&ip=1`;
-        let ipURL2 = `https://domain-reputation-api.whoisxmlapi.com/api/v1?apiKey=at_hlGtCnlRNdDjwETKwzP8m73YcYq99&domainName=${url2Check}`;
+        let ipURL2 = `https://domain-reputation-api.whoisxmlapi.com/api/v1?apiKey=${catKey}&domainName=${url2Check}&outputFormat=JSON&ip=1`;
 
 
         $.ajax({
