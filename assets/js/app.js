@@ -95,15 +95,16 @@ $(document).ready(function () {
 
 
     $("#submit-button").on("click", function (event) {
-        $("#img").empty();
-        $("#ip").empty();
+        
+        // $("#ratings").empty();
         event.preventDefault();
 
 
 
         var url = $('#user-link').val().trim();
-        if (url) {
-
+        if (url !== "") {
+            $("#img").empty();
+            $("#ip").empty();
             // function that takes the url the user gave and performs an AJAX call for Info
             // $("#img").empty();
             // $("#stuff").empty();
@@ -122,7 +123,9 @@ $(document).ready(function () {
             $('#img').append(pic);
 
         }
-
+else {
+    alert("Please enter a URL");
+}
 
 
 
